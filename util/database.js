@@ -8,7 +8,7 @@ const client = new MongoClient(url, { useUnifiedTopology: true });
 const mongoConnect = async (callback) => {
   try {
     await client.connect(); //client.connect('db_name');//like shop
-    _db = client.db();
+    _db = client.db(); //this gives an open db connection
     // console.log(_db);
     callback(); //just the app.listen(3000) in app.js
   } catch (error) {

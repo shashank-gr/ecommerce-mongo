@@ -24,7 +24,7 @@ class Product {
     const product = await db
       .collection("products")
       .findOne({ _id: new mongodb.ObjectId(prodId) });
-    // .next(); //to find the last document; when we use just find as it gives a cursor find({ _id: new mongodb.ObjectId(prodId) })
+    // .next(); //to find the first document; when we use just find as it gives a cursor find({ _id: new mongodb.ObjectId(prodId) })
     console.log(product);
     return product;
   }
